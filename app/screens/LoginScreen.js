@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { useState } from 'react';
-import { View, Text, Image, KeyboardAvoidingView } from 'react-native';
+import { View, Text, Image, KeyboardAvoidingView, Platform } from 'react-native';
 import { Formik } from 'formik';
 import * as Yup from 'yup'
 
