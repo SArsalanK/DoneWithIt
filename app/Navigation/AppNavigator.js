@@ -51,9 +51,6 @@ const AppNavigator = () => {
 
     useEffect(() => {
         registerForPushNotification()
-
-
-
     }, [])
 
     return (
