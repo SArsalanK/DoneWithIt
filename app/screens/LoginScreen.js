@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { useState } from 'react';
-import { View, Text, Image, KeyboardAvoidingView, Platform } from 'react-native';
+import { View, Text, Image, ImageBackground, Platform } from 'react-native';
 import { Formik } from 'formik';
 import * as Yup from 'yup'
 
@@ -36,7 +36,7 @@ export default function LoginScreen() {
     }
     return (
 
-        <Screen>
+        <ImageBackground blurRadius={10} style={styles.loginAndRegisterContainer} source={require('../assets/background.jpg')}>
             <Image style={styles.logo} source={require('../assets/icon.png')}></Image>
             <AppForm
                 validationSchema={validationScheme}
@@ -47,7 +47,7 @@ export default function LoginScreen() {
                 <AppFormField name={'password'} icon={'lock'} placeholder={'Password'} autoCapitalize={'none'} autoCorrect={false} secureTextEntry textContentType={'password'} ></AppFormField>
                 <SubmitButton title={'Login'}></SubmitButton>
             </AppForm>
-        </Screen>
+        </ImageBackground>
 
     )
 }

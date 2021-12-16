@@ -17,6 +17,10 @@ const styles = StyleSheet.create({
         padding: 10,
 
     },
+    loginAndRegisterContainer: {
+        flex: 1,
+        padding: 10,
+    },
     headerContainer: {
         position: 'absolute',
         top: 10,
@@ -140,7 +144,7 @@ const styles = StyleSheet.create({
         backgroundColor: colors.lightGray
     },
     textInputContainer: {
-        backgroundColor: colors.lightGray,
+        backgroundColor: colors.lightGrayWithAplha,
         flexDirection: 'row',
         borderRadius: 25,
         padding: 15,
