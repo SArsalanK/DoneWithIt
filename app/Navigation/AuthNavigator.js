@@ -15,8 +15,8 @@ const AuthNavigator = () => (
     <NavigationContainer theme={NavigationTheme}>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name={'Welcome'} component={WelcomeScreen}></Stack.Screen>
-            <Stack.Screen name={'Login'} component={LoginScreen} options={{ title: "Login", headerShown: true, headerTintColor: colors.primary }}></Stack.Screen>
-            <Stack.Screen name={'Register'} component={RegisterScreen} options={{ title: "Register Screen", headerShown: true, headerTintColor: colors.primary }}></Stack.Screen>
+            <Stack.Screen name={'Login'} component={LoginScreen} options={{ title: "Login", headerShown: false, headerTintColor: colors.primary }}></Stack.Screen>
+            <Stack.Screen name={'Register'} component={RegisterScreen} options={{ title: "Register Screen", headerShown: false, headerTintColor: colors.primary }}></Stack.Screen>
         </Stack.Navigator>
     </NavigationContainer>
 );

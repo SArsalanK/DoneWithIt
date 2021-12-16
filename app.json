@@ -6,7 +6,7 @@
     "orientation": "portrait",
     "icon": "./app/assets/icon.png",
     "splash": {
-      "image": "./app/assets/splash.png",  
+      "image": "./app/assets/splash.png",
       "resizeMode": "cover",
       "backgroundColor": "#363c4b"
     },
@@ -22,12 +22,12 @@
     "android": {
       "useNextNotificationsApi": false,
       "adaptiveIcon": {
-        "foregroundImage": "./app/assets/adaptive-icon.png",
+        "foregroundImage": "./app/assets/icon.png",
         "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
-      "favicon": "./app/assets/favicon.png"
+      "favicon": "./app/assets/icon.png"
     }
   }
 }

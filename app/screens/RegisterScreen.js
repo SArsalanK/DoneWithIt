@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, Text, ActivityIndicator, KeyboardAvoidingView, Platform } from 'react-native'
+import { View, Text, ActivityIndicator, KeyboardAvoidingView, Platform, StyleSheet } from 'react-native'
 import * as Yup from 'yup'
 
 import AppTextInput from '../components/AppTextInput'
@@ -46,19 +46,17 @@ export default function RegisterScreen() {
 
         <>
             <AppActivityIndicator visible={registerApiConst.loading || loginApiConst.loading}></AppActivityIndicator>
-            <Screen>
-                <KeyboardAvoidingView behavior={'position'} keyboardVerticalOffset={Platform.OS === "ios" ? 0 : 100}>
-                    <AppForm
-                        initialValues={{ name: '', email: '', password: '' }}
-                        validationSchema={validationScheme}
-                        onSubmit={handleSubmit}>
-                        {error && <ErrorMessage error={error} visible={registerationFailed}></ErrorMessage>}
-                        <AppFormField name={'name'} icon={'account'} placeholder={'Name'} autoCapitalize={'words'} autoCorrect={false} keyboardType={'default'} textContentType={'name'} ></AppFormField>
-                        <AppFormField name={'email'} icon={'email'} placeholder={'Email'} autoCapitalize={'none'} autoCorrect={false} keyboardType={'email-address'} textContentType={'emailAddress'} ></AppFormField>
-                        <AppFormField name={'password'} icon={'lock'} placeholder={'Password'} autoCapitalize={'none'} autoCorrect={false} keyboardType={'default'} textContentType={'password'} secureTextEntry={true}></AppFormField>
-                        <SubmitButton title={'Register'}></SubmitButton>
-                    </AppForm>
-                </KeyboardAvoidingView>
+            <Screen style={{ justifyContent: 'center', alignItems: 'center' }} >
+                <AppForm
+                    initialValues={{ name: '', email: '', password: '' }}
+                    validationSchema={validationScheme}
+                    onSubmit={handleSubmit}>
+                    {error && <ErrorMessage error={error} visible={registerationFailed}></ErrorMessage>}
+                    <AppFormField name={'name'} icon={'account'} placeholder={'Name'} autoCapitalize={'words'} autoCorrect={false} keyboardType={'default'} textContentType={'name'} ></AppFormField>
+                    <AppFormField name={'email'} icon={'email'} placeholder={'Email'} autoCapitalize={'none'} autoCorrect={false} keyboardType={'email-address'} textContentType={'emailAddress'} ></AppFormField>
+                    <AppFormField name={'password'} icon={'lock'} placeholder={'Password'} autoCapitalize={'none'} autoCorrect={false} keyboardType={'default'} textContentType={'password'} secureTextEntry={true}></AppFormField>
+                    <SubmitButton title={'Register'}></SubmitButton>
+                </AppForm>
             </Screen>
 
         </>

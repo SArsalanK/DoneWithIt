@@ -37,18 +37,16 @@ export default function LoginScreen() {
     return (
 
         <Screen>
-            <Image style={styles.logo} source={require('../assets/logo-red.png')}></Image>
-            <KeyboardAvoidingView behavior={'position'} keyboardVerticalOffset={Platform.OS === "ios" ? 0 : 100}>
-                <AppForm
-                    validationSchema={validationScheme}
-                    initialValues={{ email: "", password: "" }}
-                    onSubmit={handleSubmit}>
-                    <ErrorMessage error={"Invalid email and/or password."} visible={loginFailed}></ErrorMessage>
-                    <AppFormField name={'email'} icon={'email'} placeholder={'Email'} autoCapitalize={'none'} autoCorrect={false} keyboardType={'email-address'} textContentType={'emailAddress'} ></AppFormField>
-                    <AppFormField name={'password'} icon={'lock'} placeholder={'Password'} autoCapitalize={'none'} autoCorrect={false} secureTextEntry textContentType={'password'} ></AppFormField>
-                    <SubmitButton title={'Login'}></SubmitButton>
-                </AppForm>
-            </KeyboardAvoidingView>
+            <Image style={styles.logo} source={require('../assets/icon.png')}></Image>
+            <AppForm
+                validationSchema={validationScheme}
+                initialValues={{ email: "", password: "" }}
+                onSubmit={handleSubmit}>
+                <ErrorMessage error={"Invalid email and/or password."} visible={loginFailed}></ErrorMessage>
+                <AppFormField name={'email'} icon={'email'} placeholder={'Email'} autoCapitalize={'none'} autoCorrect={false} keyboardType={'email-address'} textContentType={'emailAddress'} ></AppFormField>
+                <AppFormField name={'password'} icon={'lock'} placeholder={'Password'} autoCapitalize={'none'} autoCorrect={false} secureTextEntry textContentType={'password'} ></AppFormField>
+                <SubmitButton title={'Login'}></SubmitButton>
+            </AppForm>
         </Screen>
 
     )
